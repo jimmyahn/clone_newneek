@@ -1,0 +1,7 @@
+*.pyc
+*~
+__pyache__
+newneek
+db.sqlite3
+/static
+.DS_store
