@@ -1,0 +1,38 @@
+{% load static %}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <div class='top'>
+            <div id="time-zone" style='font-size:15pt;font-weight:bolder'>
+                <span id="current-date"></span>
+                <span id='current-day'></span>
+            </div>
+            <div id='header'>
+                <h1>뉴우-닉</h1>
+            </div>
+            <div class="navi">
+                <div class="navi-hamburger-btn" onclick="openNav()">&#9776;</div>
+                <span id="side-background"></span>
+                <div id="side-nav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/post_list">Resume</a>
+                </div>
+            </div>
+        </div>
+        <div class='block'>
+            {% block content %}
+            {% endblock %}
+        </div>
+        
+    </body>
+        <div class='footer'>     </div>
+        <script src="{% static 'js/date.js' %}"></script>
+        <script src="{% static 'js/menu.js' %}"></script>
+
+        
+    
+    
