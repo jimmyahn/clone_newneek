@@ -5,8 +5,6 @@ from django.shortcuts import redirect
 from django.http import HttpResponse
 from .form import PostForm
 from .models import SnsData
-from .form import AboutForm
-from .models import About
 from .models import Post
 
 
@@ -50,14 +48,7 @@ def post_edit(request, pk):
 def about(request):
     return render(request, 'portfolio/about.html')
 
-def main(request, template='portfolio/main.html'):
-    context={
-        'posts' : Post.objects.all(),
-        'parsed_data' : SnsData.objects.all()
-    }
-    return render(request, template, context)
-
-def parsed_data(request):
-    
-    return render(request, 'portfolio/main.html',{'parsed_data':parsed_data})
-
+def main(request):
+    posts = Post.objects.all()
+    parsed_data = SnsData.objects.all()
+    return render(request, 'portfolio/main.html', {'posts':posts})
