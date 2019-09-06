@@ -21,5 +21,4 @@ class SnsData(models.Model):
     author = models.TextField()
     text = models.TextField()
     hashtag = models.TextField()
-    link = models.URLField()
 
