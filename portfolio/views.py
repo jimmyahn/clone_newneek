@@ -51,4 +51,4 @@ def about(request):
 def main(request):
     posts = Post.objects.all()
     parsed_data = SnsData.objects.all()
-    return render(request, 'portfolio/main.html', {'posts':posts})
+    return render(request, 'portfolio/main.html', {'posts':posts,'parsed_data':parsed_data})
